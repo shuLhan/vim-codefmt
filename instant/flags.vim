@@ -258,3 +258,6 @@ call s:plugin.Flag('ormolu_executable', 'ormolu')
 ""
 " The path to the ocamlformat executable.
 call s:plugin.Flag('ocamlformat_executable', 'ocamlformat')
+
+" The path to the xmllint executable xmllint --format -
+call s:plugin.Flag('xmllint_executable', 'xmllint')
