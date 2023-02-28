@@ -38,7 +38,7 @@ function! codefmt#gofmt#GetFormatter() abort
   " @flag(gofmt_executable), only targeting the range between {startline} and
   " {endline}.
   function l:formatter.FormatRange(startline, endline) abort
-    let l:cmd = [ s:plugin.Flag('gofmt_executable') ]
+    let l:cmd = split(s:plugin.Flag('gofmt_executable'), '\\\@<! ')
     try
       " gofmt does not support range formatting.
       " TODO: File a feature request with gofmt and link it here.
